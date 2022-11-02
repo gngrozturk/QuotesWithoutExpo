@@ -2,7 +2,7 @@
 
 It is a mobile application that displays quotes. If you scroll down the screen, the quote will be refreshed as you can see in the second picture, and the "Change The Quote" button that you can see at the bottom of the page also has the same function.
 
-<p align="center"><img align="center" src="https://raw.githubusercontent.com/gngrozturk/QuotesApp/master/ss/SS1.jpg" width="300" />     <img align="center" src="https://raw.githubusercontent.com/gngrozturk/QuotesApp/master/ss/SS2.jpg" width="300" /></p>
+<p align="center"><img align="center" src="https://raw.githubusercontent.com/gngrozturk/QuotesWithoutExpo/master/SS/ss1.png" width="300" />     <img align="center" src="https://raw.githubusercontent.com/gngrozturk/QuotesWithoutExpo/master/SS/ss2.png" width="300" /></p>
 
 ## Development Process
 
