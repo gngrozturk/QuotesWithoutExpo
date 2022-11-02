@@ -32,8 +32,6 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   author: {
-    margin: Spacing.small,
-    padding: Spacing.small,
     fontSize: Fonts.normal,
     textAlign: 'right',
     fontWeight: 'bold',

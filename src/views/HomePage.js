@@ -47,45 +47,44 @@ const HomePage = ({route}) => {
     return null;
   } else {
     return (
-      <SafeAreaView style={styles.container}>
-        <ScrollView
-          contentContainerStyle={styles.contentContainer}
-          refreshControl={
-            <RefreshControl
-              refreshing={refresh}
-              onRefresh={() => refreshQuote()}
-            />
-          }>
-          <View style={styles.panel}>
-            <Title title="Quote of Day" />
-            <Button title="Refresh Quote" onPress={updateQuote} />
-          </View>
-          <View style={styles.quote}>
-            <Quote content={data.content} author={data.author} />
-          </View>
+      <ScrollView
+        style={styles.container}
+        contentContainerStyle={styles.contentContainer}
+        refreshControl={
+          <RefreshControl
+            refreshing={refresh}
+            onRefresh={() => refreshQuote()}
+          />
+        }>
+        <View style={styles.panel}>
+          <Title title="Quote of Day" />
+          <Button title="Refresh Quote" onPress={updateQuote} />
+        </View>
+        <View style={styles.quote}>
+          <Quote content={data.content} author={data.author} />
           <Footer text="Thank you for using Quote of Day app." />
-        </ScrollView>
-      </SafeAreaView>
+        </View>
+      </ScrollView>
     );
   }
 };
 
 const styles = StyleSheet.create({
   contentContainer: {
-    flex: 1,
     marginVertical: 5,
-  },
-  container: {
     width: '100%',
     flex: 1,
+  },
+  container: {
     backgroundColor: Colors.BG_COLOR,
   },
   panel: {
-    height: '40%',
     justifyContent: 'space-around',
+    flex: 1,
   },
   quote: {
-    height: '54%',
+    flex: 2,
+    justifyContent: 'space-between',
   },
 });
 
