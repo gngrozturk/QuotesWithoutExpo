@@ -7,8 +7,8 @@ import Fonts from '../utilities/Fonts';
 const Quote = ({content, author}) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.content}>{content}</Text>
-      <Text style={styles.author}>- {author}</Text>
+      <Text style={styles.content}>"{content}"</Text>
+      <Text style={styles.author}>{author}</Text>
     </View>
   );
 };
@@ -16,31 +16,27 @@ const Quote = ({content, author}) => {
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
-    margin: Spacing.normal,
-    padding: Spacing.normal,
-    borderTopEndRadius: Spacing.large,
-    borderBottomStartRadius: Spacing.large,
-    shadowColor: Colors.SHADOW,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 2,
-    elevation: 2.8,
+    margin: Spacing.large,
+    padding: Spacing.xlarge,
+    backgroundColor: Colors.LIGHT_BLUE,
+    borderRadius: 40,
+    borderWidth: 5,
+    borderStyle: 'dotted',
+    borderColor: Colors.DARK_BLUE,
   },
   content: {
-    fontSize: Fonts.large,
-    marginVertical: Spacing.small,
+    fontSize: Fonts.medium,
+    margin: Spacing.small,
     padding: Spacing.small,
-    color: Colors.TEXT_COLOR,
-    fontWeight: 'bold',
+    color: Colors.TEXT_DARK,
     fontStyle: 'italic',
   },
   author: {
-    margin: Spacing.medium,
+    margin: Spacing.small,
+    padding: Spacing.small,
     fontSize: Fonts.normal,
     textAlign: 'right',
+    fontWeight: 'bold',
   },
 });
 

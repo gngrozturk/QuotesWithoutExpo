@@ -26,7 +26,7 @@ This starts Metro Bundler.
 
 After that, open a new terminal inside your React Native project folder and run :
 ```bash
-react-native run-android
+yarn react-native run-android
 ```
 
 ## Contributing

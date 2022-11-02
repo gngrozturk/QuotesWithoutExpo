@@ -7,25 +7,25 @@
  */
 
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomePage from './src/views/HomePage';
-import Colors from './src/utilities/Colors';
+import SelectionPage from './src/views/SelectionPage';
 
 const App = () => {
+  const Stack = createNativeStackNavigator();
   return (
-    <SafeAreaView style={styles.container}>
-      <HomePage />
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+        initialRouteName="SelectionPage">
+        <Stack.Screen name="SelectionPage" component={SelectionPage} />
+        <Stack.Screen name="HomePage" component={HomePage} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: Colors.BG_COLOR,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 export default App;
